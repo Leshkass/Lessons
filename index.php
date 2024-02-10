@@ -1,5 +1,4 @@
 <?php
-declare(strict_types = 1);
 
 function CreateArray(int $length = 20, int $min = 0, int $max = 10 ) : array
 {
@@ -15,6 +14,9 @@ function CreateArray(int $length = 20, int $min = 0, int $max = 10 ) : array
 }
 
 $newArray = CreateArray(5);
+
+
+echo "Prived medved";
 
 //$numMax = 0;
 //
