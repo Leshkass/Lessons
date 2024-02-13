@@ -7,12 +7,18 @@ class Workers
 
     private string $job;
 
+    /**
+     * @throws Exception
+     */
     public function __construct(string $name, string $job)
     {
         $this->setName($name);
         $this->setJob($job);
     }
 
+    /**
+     * @throws Exception
+     */
     private function setName(string $name) : void
     {
         if(strlen($name) < 2){
@@ -23,6 +29,9 @@ class Workers
 
     }
 
+    /**
+     * @throws Exception
+     */
     private function setJob(string $job) : void
     {
 
