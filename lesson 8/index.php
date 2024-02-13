@@ -13,5 +13,4 @@ try {
     echo $error->getMessage();
 }
 
-echo $employee->getData();
-
+echo $employee->getData() . PHP_EOL;

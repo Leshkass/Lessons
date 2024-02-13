@@ -29,10 +29,10 @@ class Workers
         if($job === 'developer' or $job === 'manager' or $job === 'tester'){
             $this->job = $job;
 
-        } else {
-
-            throw new Exception('Invalid job');
         }
+
+        throw new Exception('Invalid job');
+
 
     }
 
