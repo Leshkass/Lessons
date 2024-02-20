@@ -1,7 +1,7 @@
 <?php
 declare(strict_types = 1);
 
-require 'BankAccount.php';
+require 'classes/BankAccount.php';
 
 $bankAccount = new BankAccount(111,9999);
 
