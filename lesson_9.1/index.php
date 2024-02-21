@@ -11,6 +11,7 @@ try {
     echo $error->getMessage();
 }
 
+
 try {
     $secondBankAccount = new BankAccount(222,0);
 
@@ -18,6 +19,7 @@ try {
 
     echo $error->getMessage();
 }
+
 
 $secondBankAccount->replenishment($bankAccount->getBalance());
 
