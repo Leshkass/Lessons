@@ -5,6 +5,7 @@ require 'classes/BankAccount.php';
 
 try {
     $bankAccount = new BankAccount(111,9999);
+
 } catch (Exception $error){
 
     echo $error->getMessage();
@@ -13,7 +14,7 @@ try {
 try {
     $secondBankAccount = new BankAccount(222,0);
 
-}catch (Exception $error){
+} catch (Exception $error){
 
     echo $error->getMessage();
 }
