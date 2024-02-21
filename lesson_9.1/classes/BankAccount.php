@@ -27,6 +27,9 @@ class BankAccount
 
     private function setBalance(float $balance): void
     {
+        if($balance <= 0){
+            throw new Exception('Balance can not be < 0');
+        }
         $this->balance = $balance;
     }
 
@@ -37,7 +40,7 @@ class BankAccount
 
     public function replenishment(float $amount): void
     {
-        if ($amount < 0) {
+        if ($amount <= 0) {
             throw new Exception('Amount value can not be < 0');
         }
         $this->balance += $amount;

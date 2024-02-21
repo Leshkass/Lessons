@@ -3,10 +3,20 @@ declare(strict_types = 1);
 
 require 'classes/BankAccount.php';
 
-$bankAccount = new BankAccount(111,9999);
+try {
+    $bankAccount = new BankAccount(111,9999);
+} catch (Exception $error){
 
-$secondBankAccount = new BankAccount(222,0);
+    echo $error->getMessage();
+}
 
+try {
+    $secondBankAccount = new BankAccount(222,0);
+
+}catch (Exception $error){
+
+    echo $error->getMessage();
+}
 
 $secondBankAccount->replenishment($bankAccount->getBalance());
 
