@@ -14,9 +14,10 @@ require APP_DIR . 'enum/Enumeration.php';
 //
 //var_dump($str1);
 
-$taskManager = new TaskManager('text.txt');
+$taskManager = new TaskManager('test.txt');
 
-$taskManager->addTask('Hello' , 8);
+$taskManager->addTask('Hello' , 2);
+
 
 $taskManager->getTaskList();
 //unset($taskManager);

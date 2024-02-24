@@ -24,7 +24,6 @@ class TaskManager
 
             $this->setTaskArray(fread($file, filesize($this->filePath)));
 
-            fclose($file);
         }
     }
 
@@ -58,6 +57,7 @@ class TaskManager
     public function getTaskList()
     {
         // возвращает все задания из списка , отсортированые в порядке убывания
+        return arsort($this->taskArray);
     }
 
 
