@@ -11,23 +11,29 @@ class TaskManager
 
     private string $filePath;
 
-    private  $taskArray;
+    private array $taskArray;
 
 
     public function __construct(string $filePath)
     {
         $this->filePath = $filePath;
+
+        if(empty($this->filePath)){
+
+            $file = fopen($this->filePath, 'a+');
+
+            $this->setTaskArray(fread($file, filesize($this->filePath)));
+
+            fclose($file);
+        }
     }
 
-    private function setTaskArray( $taskArray)
+    private function setTaskArray($taskArray) : void
     {
-        $this->taskArray = $taskArray;
+        $this->taskArray = json_decode($taskArray,true);
     }
 
-    private function getTaskArray() : array
-    {
-        return $this->taskArray;
-    }
+
 
     /**
      * @throws Exception
@@ -40,18 +46,17 @@ class TaskManager
             throw new Exception('Allowed range for priority is from 0 to 10');
         }
 
-        $file = fopen($this->filePath, 'a+');
+        $file = fopen($this->filePath,'a+');
 
-        fwrite($file, $taskName . ' Приоритет  ' . $priority . PHP_EOL);
+        fwrite($file, $taskName . ' Приоритет ' . $priority . PHP_EOL);
 
-        $this->setTaskArray(json_decode(fread($file, filesize($this->filePath)),true));
+
     }
 
 
 
     public function getTaskList()
     {
-            return $this->taskArray;
         // возвращает все задания из списка , отсортированые в порядке убывания
     }
 

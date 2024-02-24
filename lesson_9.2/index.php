@@ -16,8 +16,9 @@ require APP_DIR . 'enum/Enumeration.php';
 
 $taskManager = new TaskManager('text.txt');
 
-var_dump($taskManager->getTaskList());
+$taskManager->addTask('Hello' , 8);
 
+$taskManager->getTaskList();
 //unset($taskManager);
 
 //$a = ['first' => 1, 'second' => 2, ['sdf' => 123]];
