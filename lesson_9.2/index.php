@@ -7,9 +7,26 @@ require APP_DIR . 'classes/TaskManager.php';
 require APP_DIR . 'enum/TaskStatus.php';
 
 
-try {
+$taskManager = new TaskManager('tasks.json');
 
-    $taskManager = new TaskManager('tasks.json');
+try {
+    $taskManager->addTask('Learn php' ,2);
+
+} catch (Exception $error){
+
+    echo $error->getMessage();
+}
+
+try {
+    $taskManager->addTask('Learn php' ,4);
+
+} catch (Exception $error){
+
+    echo $error->getMessage();
+}
+
+try {
+    $taskManager->addTask('Learn php' ,9);
 
 } catch (Exception $error){
 
@@ -17,17 +34,11 @@ try {
 }
 
 
-$taskManager->deleteTask(5);
+//
+//
+$taskManager->completeTask(2);
+//
 
-print_r($taskManager->getTaskList());
-
-//$taskManager->addTask('php learn' , 4);
-//$taskManager->addTask('php learn' , 2);
-//$taskManager->addTask('php learn' , 5);
-//
-//
-//$taskManager->completeTask(2);
-//
-//print_r($taskManager->getTaskList());
+var_dump($taskManager->getTaskList());
 
 
