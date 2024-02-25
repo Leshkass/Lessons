@@ -11,27 +11,15 @@ $taskManager = new TaskManager('tasks.json');
 
 try {
     $taskManager->addTask('Learn php' ,2);
-
-} catch (Exception $error){
-
-    echo $error->getMessage();
-}
-
-try {
+    $taskManager->addTask('Learn php' ,9);
     $taskManager->addTask('Learn php' ,4);
 
-} catch (Exception $error){
-
-    echo $error->getMessage();
-}
-
-try {
-    $taskManager->addTask('Learn php' ,9);
 
 } catch (Exception $error){
 
     echo $error->getMessage();
 }
+
 
 
 //
