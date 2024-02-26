@@ -2,7 +2,7 @@
 
 class SomeTextHeir extends SomeText
 {
-    public function printHeir(): string
+    public function printUpper(): string
     {
         return strtoupper(parent::print());
     }

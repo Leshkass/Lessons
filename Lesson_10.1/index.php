@@ -6,8 +6,6 @@ define('APP_DIR', __DIR__ . '/');
 require APP_DIR . 'classes/SomeText.php';
 require APP_DIR . 'classes/SomeTextHeir.php';
 
-$test = new SomeText();
+$secondText =new SomeTextHeir();
 
-$test1 =new SomeTextHeir();
-
-echo $test1->printHeir() . PHP_EOL;
+echo $secondText->printUpper() . PHP_EOL;
