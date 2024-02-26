@@ -8,4 +8,4 @@ require APP_DIR . 'classes/SomeTextHeir.php';
 
 $secondText =new SomeTextHeir();
 
-echo $secondText->printUpper() . PHP_EOL;
+echo $secondText->print() . PHP_EOL;

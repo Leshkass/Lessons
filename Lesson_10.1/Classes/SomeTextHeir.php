@@ -2,9 +2,9 @@
 
 class SomeTextHeir extends SomeText
 {
-    public function printUpper(): string
+    public function print(): string
     {
-        return strtoupper(parent::print());
+        return strtoupper($this->text);
     }
 
 }
