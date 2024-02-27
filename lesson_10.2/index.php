@@ -17,14 +17,16 @@ try {
 }
 
 
-//echo $test->getPerimeter() . PHP_EOL;
+//echo $rectangle->area() . PHP_EOL;
 
 try {
-    $circle = new Circle(5);
+    $circle = new Circle(12.3);
 
 } catch (Exception $error){
 
     echo $error->getMessage();
 }
 
-echo $circle->getArea() . PHP_EOL;
+echo $circle->area() . PHP_EOL;
+
+

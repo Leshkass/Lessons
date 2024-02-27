@@ -1,7 +1,5 @@
 <?php
 
-define('PI',3.14);
-
 class Circle extends Figure
 {
     private int|float $radius;
@@ -13,7 +11,7 @@ class Circle extends Figure
             throw new Exception('Invalid radius');
         }
 
-        $this->setRadius($radius);
+        $this->radius = $radius;
     }
 
     public function getRadius(): int|float
@@ -21,23 +19,14 @@ class Circle extends Figure
         return $this->radius;
     }
 
-    private function setRadius(float|int $radius): void
+
+    public function area(): int|float
     {
-        $this->radius = $radius;
+        return round(pi() * $this->radius** 2,2);
     }
 
-    public function getArea(): int|float
+    public function perimeter(): int|float
     {
-        return PI * $this->radius** 2;
-    }
-
-    public function area(): void
-    {
-
-    }
-
-    public function perimeter(): void
-    {
-
+        return round(2 * pi() * $this->radius,2);
     }
 }

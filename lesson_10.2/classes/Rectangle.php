@@ -15,8 +15,8 @@ class Rectangle extends Figure
             throw new Exception('Invalid length');
         }
 
-        $this->setWidth($width);
-        $this->setLength($length);
+        $this->width = $width;
+        $this->length = $length;
 
     }
 
@@ -30,29 +30,14 @@ class Rectangle extends Figure
         return $this->width;
     }
 
-    private function setLength($length): void
+
+    public function area(): int|float
     {
-        $this->length = $length;
+        return round($this->length * $this->width,2);
     }
 
-    private function setWidth($width): void
+    public function perimeter(): int|float
     {
-        $this->width = $width;
-    }
-
-    public function getPerimeter(): int|float
-    {
-        return ($this->width * 2) + ($this->length * 2);
-    }
-
-
-    public function area(): void
-    {
-
-    }
-
-    public function perimeter(): void
-    {
-
+        return round(($this->width * 2) + ($this->length * 2),2);
     }
 }
