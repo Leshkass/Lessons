@@ -20,7 +20,7 @@ try {
 //echo $rectangle->area() . PHP_EOL;
 
 try {
-    $circle = new Circle(12.3);
+    $circle = new Circle(5);
 
 } catch (Exception $error){
 
