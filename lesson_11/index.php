@@ -15,6 +15,11 @@ $variable = new User();
 
 $variable->setCreatedAt(new DateTime());
 
-echo $variable->getCreatedAr() . PHP_EOL;
+echo $variable->getCreatedAr()->format('m.d.y H:i:s') . PHP_EOL;
 
- 
+
+//echo $dataTime->format('Y.m.d') . PHP_EOL;
+//
+//echo $dataTime->format('d.m.Y') . PHP_EOL;
+//
+//echo $dataTime->format('m.Y.d  H:i:s' ) . PHP_EOL;
