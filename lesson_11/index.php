@@ -15,3 +15,6 @@ $variable = new User();
 
 $variable->setCreatedAt(new DateTime());
 
+echo $variable->getCreatedAr() . PHP_EOL;
+
+ 

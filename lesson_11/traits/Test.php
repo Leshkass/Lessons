@@ -12,9 +12,9 @@ trait Test
         $this->createdAt  = $createdAr;
     }
 
-    public function getCreatedAr(): DateTime
+    public function getCreatedAr(): string
     {
-        return $this->createdAt;
+        return $this->createdAt->format('d.m.Y H:i:s');
     }
 
     public function setUpdatedAt(DateTime $updated): void
