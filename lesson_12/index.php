@@ -23,7 +23,7 @@ function getNameUser(string $name): string
 }
 
 
-// не правильно
+// не правильно нет пробелов между '}' и 'if,else' , и elseif должно быть одним словом без пробелов
 if($a===$b){
     $result = $b;
 }else if($a===$c){
@@ -42,3 +42,21 @@ if ($a === $b) {
 } else {
     echo $a;
 }
+
+
+
+class Users
+{
+    public $name; // всегда нужно указавать тип данных
+
+     private int $age; // вот так
+
+
+    function setName($name)  // нехватает типа агрумента и что вщзвращает метод, а также области видимости метода
+    {
+        $this->name = $name;
+    }
+}
+
+$task = new Users; // не правильно всегда при создании должны быть '()'
+
