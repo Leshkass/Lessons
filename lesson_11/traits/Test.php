@@ -9,6 +9,7 @@ trait Test
 
     public function setCreatedAt(DateTime $createdAr): void
     {
+        $b = 5;
         $this->createdAt  = $createdAr;
     }
 
