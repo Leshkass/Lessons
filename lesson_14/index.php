@@ -62,10 +62,10 @@ try {
 //    $stmt = $query->execute();
 
 
-    $price = 64;
+    $price = 18;
     $weight = 98;
 
-    $query = "DELETE FROM `NewTable` where `price` > :price or `weight` = :weight";
+    $query = "DELETE FROM `NewTable` where `price` = :price or `weight` = :weight";
 
     $query = $connect->prepare($query);
     $stmt = $query->bindParam('price', $price);
